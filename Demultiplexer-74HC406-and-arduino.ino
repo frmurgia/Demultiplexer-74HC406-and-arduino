@@ -46,7 +46,7 @@ void setup(){
     Serial.begin(9600);
 }
 
-int readMux(int channel){
+int writeMux(int channel){
   int controlPin[] = {s0, s1, s2, s3};
 
 //tabella verità
@@ -81,7 +81,7 @@ int readMux(int channel){
 void loop(){
   
 for(int i=0;i<15;i++){
-  readMux(i);
+  writeMux(i);// chiama la funzione che attiva ogni pin  
   delay(160);
   }
 
